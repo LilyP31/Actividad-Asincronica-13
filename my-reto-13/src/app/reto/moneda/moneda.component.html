@@ -1,0 +1,25 @@
+<section>
+    <div class="container border1">
+        <h3>Currency Pipes</h3>
+        <form [formGroup]="registro">
+          <div class="form-group p-1">
+            <label for="valor">Ingresa un valor:</label>
+            <input type="number" class="text1 m-2" formControlName="valor" name="value" id="value" required>
+          </div>
+          <div class="form-group p-2">
+            <label for="moneda">Selecciona la moneda:</label>
+            <select class="col-3 form-control" 
+            
+            formControlName="moneda" name="moneda" id="moneda" required>
+              <option value="USD">Dólares</option>
+              <option value="EUR">Euros</option>
+              <option value="COP">Pesos Colombianos</option>
+              <option value="s/.">Soles</option>
+            </select>
+          </div>
+          <section>
+          {{registro.get('valor').value}} {{registro.get('valor').value | currency: registro.get('moneda').value}}
+          </section>
+        </form>
+      </div>
+</section>

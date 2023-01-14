@@ -1,0 +1,14 @@
+
+<section class="container p-4">
+    <form [formGroup]="registro">
+        <section class="border1">
+            <h3>Uso de Pipes</h3>
+            <label for="valor">Valor:</label>
+            <input class="text1 m-2" type="text" formControlName="valor">  
+            <p>Resultado : {{ valor?.value | uppercase}} </p>
+        </section>
+        </form>
+        <section class="p-3">
+            <app-moneda></app-moneda>
+        </section>
+</section>
